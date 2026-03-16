@@ -1,6 +1,3 @@
-terraform {
-  required_version = ">= 1.0"
-}
 
 # Generate SSH key pair
 resource "tls_private_key" "demo_key" {
