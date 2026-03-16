@@ -2,10 +2,6 @@ terraform {
   required_version = ">= 1.0"
 }
 
-provider "aws" {
-  #region = var.aws_region
-}
-
 # Generate SSH key pair
 resource "tls_private_key" "demo_key" {
   algorithm = "RSA"
