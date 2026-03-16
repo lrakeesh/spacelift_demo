@@ -1,4 +1,3 @@
-
 # Generate SSH key pair
 resource "tls_private_key" "demo_key" {
   algorithm = "RSA"
