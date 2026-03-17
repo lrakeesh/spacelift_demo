@@ -1,3 +1,11 @@
+terraform {
+  required_version = ">= 1.0"
+}
+
+provider "aws" {
+  region = var.aws_region
+}
+
 # Generate SSH key pair
 resource "tls_private_key" "demo_key" {
   algorithm = "RSA"
@@ -125,6 +133,13 @@ resource "aws_instance" "demo_instance" {
   tags = {
     Name = "demo-instance"
   }
+}
+
+
+# Variables
+variable "aws_region" {
+  description = "AWS region to deploy resources"
+  type        = string
 }
 
 # Outputs
