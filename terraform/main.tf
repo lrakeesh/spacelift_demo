@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.region
+  region = var.aws.region
 }
 
 # Generate SSH key pair
