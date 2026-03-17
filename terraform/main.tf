@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  region = var.region
 }
 
 # Generate SSH key pair
@@ -136,7 +136,7 @@ resource "aws_instance" "demo_instance" {
 }
 
 # Variables
-variable "aws_region" {
+variable "region" {
   description = "AWS region to deploy resources"
   type        = string
 }
